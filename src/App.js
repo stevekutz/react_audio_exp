@@ -12,12 +12,12 @@ function App() {
   // load audio file on component load
   useEffect(() => {
     audioTune.load();
-  }, [])
+  }, [audioTune])
 
   // set the loop of audio tune
   useEffect(() => {
     audioTune.loop = playInLoop;
-  }, [playInLoop])
+  }, [playInLoop, audioTune])
 
   // play audio sound
   const playSound = () => {
